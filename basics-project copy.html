@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>Rock Climbing</title>
+
+    <style>
+      body {
+        background-image: linear-gradient(#406343, #32502e);
+      }
+
+      h1,
+      h2,
+      h4 {
+        font-family: "Abril Fatface", cursive;
+      }
+
+      p,
+      a,
+      button {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      h1 {
+        font-size: 50px;
+        margin: 0;
+      }
+
+      h2 {
+        color: #32502e;
+        margin-top: 10px;
+      }
+
+      h4 {
+        font-size: 20px;
+        margin: 0 0 15px 0;
+        text-align: center;
+        text-decoration: underline;
+      }
+
+      img {
+        border-radius: 5px;
+        display: block;
+        max-width: 50%;
+        margin: 20px auto;
+      }
+
+      p {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 25px;
+        width: 70%;
+      }
+
+      a {
+        display: block;
+        padding: 10px;
+        font-weight: 800;
+        color: #000000;
+        text-align: center;
+        text-decoration: none;
+        transition: all 150ms ease-in-out;
+      }
+
+      a:hover {
+        border-radius: 10px;
+        color: #fff;
+        background: #32502e;
+      }
+
+      button {
+        background: transparent;
+        border: solid 1px #406343;
+        border-radius: 25px;
+        box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.1);
+        display: block;
+        font-size: 20px;
+        font-weight: 800;
+        margin: 60px auto 30px;
+        padding: 15px;
+        transition: all 150ms ease-in-out;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background: #406343;
+        color: #ffffff;
+      }
+
+      .container {
+        background: #fff;
+        border: solid 2px #32502e;
+        border-radius: 15px;
+        margin: 30px auto;
+        padding: 30px 50px;
+        width: 80%;
+      }
+
+      .link-box {
+        border: solid 1px #32502e;
+        border-radius: 15px;
+        float: right;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Rock Climbing</h1>
+      <h2>Exploring the great outdoors...<em>vertically!</em></h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/017/653/original/Rock-Climbing-Flickr-by-mariachily9.jpg?1632533021"
+        alt="rock climbing"
+      />
+
+      <p>
+        <strong>Rock climbing</strong> is a sport in which participants climb
+        up, down or across natural rock formations or artificial rock walls. The
+        goal is to reach the summit of a formation or the endpoint of a usually
+        pre-defined route without falling. <br />Rock climbing is a physically
+        and mentally demanding sport, one that often tests a climber's strength,
+        endurance, agility and balance along with mental control. Knowledge of
+        proper climbing techniques and the use of specialized climbing equipment
+        is crucial for the safe completion of routes.
+      </p>
+
+      <div class="link-box">
+        <h4>Helpful links</h4>
+        <a href="https://en.wikipedia.org/wiki/Rock_climbing" target="_blank"
+          >Learn more</a
+        >
+        <a href="https://www.rei.com/h/climbing" target="_blank"
+          >Shop for gear</a
+        >
+        <a href="https://www.mountainproject.com/" target="_blank"
+          >Find a local crag!</a
+        >
+      </div>
+
+      <button>Find a climbing buddy! 🧗‍♀️</button>
+    </div>
+
+    <script>
+      function findBuddy() {
+        let name = prompt("What's your name?");
+        let city = prompt("Where do you live?");
+
+        if (name.length) {
+          alert(
+            `Hi, ${name}! We will connect you to climbers in ${city} soon!`
+          );
+        } else {
+          alert(`Oops! We need more info to connect you to other climbers!`);
+        }
+      }
+
+      let findButton = document.querySelector("button");
+      findButton.addEventListener("click", findBuddy);
+    </script>
+  </body>
+</html>
